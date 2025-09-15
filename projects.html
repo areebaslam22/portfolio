@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Areeba Aslam</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #ffb3b3;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .logo img {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 2px solid white;
+        transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: transform 0.3s;
+    }
+
+    .nav-links a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Projects Section */
+    .projects-section {
+        padding: 160px 50px;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    /* Left Side */
+    .projects-left {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .projects-left h1 {
+        font-size: 40px;
+        color: black;
+    }
+
+    .projects-left h1 span {
+        font-family: 'Dancing Script', cursive;
+        font-size: 55px;
+        font-weight: 700;
+        color: #ffb3b3;
+    }
+
+    .projects-left h2 {
+        font-size: 26px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 15px;
+    }
+
+    /* Right Side pink tilted frame */
+    .projects-right {
+        flex: 2;
+        background-color: #ffb3b3;
+        padding: 50px 30px;
+        border-radius: 40px;
+        transform: rotate(-2deg); /* thoda tilted look */
+        position: relative;
+    }
+
+    /* Project cards inside */
+    .project-step {
+        background-color: white;
+        border-radius: 25px; /* thoda curve */
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        transform: rotate(2deg); /* inner content straight kare */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .project-step:hover {
+        transform: rotate(2deg) scale(1.03); /* thoda zoom */
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .project-step h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .project-step p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Step numbers */
+    .project-step .step-number {
+        font-size: 40px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    @media(max-width: 900px) {
+        .projects-section {
+            flex-direction: column;
+        }
+    }
+    /* Extra Project Showcase Section */
+.extra-projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    gap: 40px;
+}
+.extra-left {
+    flex: 1;
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    /* transform: rotate(-2deg);  <-- ye line hata do */
+    transition: all 0.3s ease-in-out;
+}
+.extra-left:hover {
+    /* transform: rotate(-2deg) scale(1.03); <-- ye bhi hata do */
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+.extra-left h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.5;
+}
+
+.extra-right {
+    flex: 1;
+    background: #ffb3b3;
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    /* transform: rotate(2deg); <-- ye bhi hata do */
+    transition: all 0.3s ease-in-out;
+}
+.extra-right:hover {
+    /* transform: rotate(2deg) scale(1.03); <-- ye bhi hata do */
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+.extra-right img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.extra-right p {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+/* Hospital section left side stacked frames */
+.hospital-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.hospital-project .hospital-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hospital-project .extra-right {
+    flex: 1;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.hospital-project img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+
+.inventory-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.inventory-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inventory-project img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+
+
+.healthcare-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.healthcare-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.healthcare-project img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo (2).jpg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <!-- Left Side -->
+        <div class="projects-left">
+            <h1><span>Projects</span></h1>
+            <h2>Details</h2>
+        </div>
+
+        <!-- Right Side -->
+        <div class="projects-right">
+
+            <div class="project-step">
+                <div class="step-number">01</div>
+                <h3>Apple Watch Website</h3>
+                <p>A fully responsive product showcase landing page built with HTML, CSS, and JavaScript. 
+                Features: product slider, model comparison, responsive grid, and smooth animations.</p>
+            </div>
+
+            <div class="project-step">
+                <div class="step-number">02</div>
+                <h3>Hospital Management System (Java)</h3>
+                <p>Java-based desktop application for managing patient records, appointments, and staff. 
+                Includes CRUD operations and simple reporting features.</p>
+            </div>
+
+            <div class="project-step">
+                <div class="step-number">03</div>
+                <h3>Inventory Management System (Java)</h3>
+                <p>Developed an Inventory Management System in Java with database integration. 
+                The project included detailed software design documentation (UML diagrams, ERD, and flowcharts) 
+                and backend logic for product management.</p>
+            </div>
+
+            <div class="project-step">
+                <div class="step-number">04</div>
+                <h3>Healthcare Management & AI System</h3>
+                <p>A healthcare software solution integrating AI models to assist patients and medical staff. The system:<br><br>
+                • Collects symptoms from users and suggests relevant medicines.<br>
+                • Verifies uploaded medical reports and prescriptions using image processing.<br>
+                • Provides diet recommendations, including pre-defined and generated diet plans.<br>
+                • Includes backend Java code for logic handling and database integration.<br>
+                • Designed with complete software documentation: WBS, UML diagrams (Use Case, Sequence, Collaboration, Activity, Object).
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="extra-projects">
+    <!-- Left Frame -->
+    <div class="extra-left">
+        <h2>Project 1 - Apple <br> Watch Website</h2>
+    </div>
+
+    <!-- Right Frame -->
+    <div class="extra-right">
+        <img src="compare.png" alt="Apple Watch Project">
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+    </div>
+</section>
+<!-- Extra Projects - Hospital Management -->
+<!-- Extra Projects - Hospital Management -->
+<section class="extra-projects hospital-project">
+    <!-- Left Column (pink heading + white image stacked) -->
+    <div class="hospital-left">
+        <!-- Pink heading frame -->
+        <div class="extra-left pink-frame" style="background:#ffb3b3; color:white;">
+            <h2 style="color : white">Project 2 — Hospital <br> Management System</h2>
+            <p><strong>Tech Stack:</strong> Java | SQLite/MySQL</p>
+        </div>
+
+        <!-- White image frame (neeche) -->
+        <div class="extra-left white-frame same-size" style="background:white; color:#333;">
+            <img src="hosiptal.jpg" alt="Hospital Management Project">
+        </div>
+    </div>
+
+    <!-- Right Column (extra white frame with another image) -->
+    <div class="extra-right" style="background:white; color:#333;">
+        <img src="Screenshot 2025-09-11 004119.jpg" alt="Hospital Extra Image">
+        <p><strong>Additional Module Preview</strong></p>
+    </div>
+</section>
+<!-- Extra Projects - Inventory Management -->
+<section class="extra-projects inventory-project">
+    
+    <!-- Left side white image frame -->
+    <div class="extra-left white-frame same-size" style="background:white; color:#333;">
+        <img src="DSA.jpg" alt="Inventory Project Left Image">
+    </div>
+
+    <!-- Right side stacked (pink heading + white image) -->
+    <div class="inventory-right">
+        <!-- Pink heading frame -->
+        <div class="extra-left pink-frame" style="background:#ffb3b3; color:white;">
+            <h2 style="color : white">Project 03 — Inventory <br> Management System (Java + Documentation)</h2>
+            <p><strong>Tech Stack:</strong> Java, MySQL, UML Diagrams</p>
+        </div>
+
+        <!-- White image frame (neeche) -->
+        <div class="extra-left white-frame same-size" style="background:white; color:#333;">
+            <img src="erd.jpg" alt="Inventory Project Right Image">
+        </div>
+    </div>
+</section>
+<!-- Extra Projects - Healthcare Management & AI System -->
+<section class="extra-projects healthcare-project">
+    
+    <!-- Left side white image frame -->
+    <div class="extra-left white-frame same-size" style="background:white; color:#333;">
+        <img src="seq.jpg" alt="Healthcare Project Left Image">
+    </div>
+
+    <!-- Right side stacked (pink heading + white image) -->
+    <div class="healthcare-right">
+        <!-- Pink heading frame -->
+        <div class="extra-left pink-frame" style="background:#ffb3b3; color:white;">
+            <h2 style="color : white">Project 04 — Healthcare <br> Management & AI System</h2>
+            <p><strong>Tech Stack:</strong> Java, AI Concepts, Database (SQL), UML Documentation</p>
+        </div>
+
+        <!-- White image frame (neeche) -->
+        <div class="extra-left white-frame same-size" style="background:white; color:#333;">
+            <img src="use.jpg" alt="Healthcare Project Right Image">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+</body>
+</html>

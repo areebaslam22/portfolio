@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements - Areeba Aslam</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #ffb3b3;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .logo img {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 2px solid white;
+        transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: transform 0.3s;
+    }
+
+    .nav-links a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Achievements Section */
+    .achievements-section {
+        padding: 160px 50px;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    /* Left Side */
+    .achievements-left {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .achievements-left h1 {
+        font-size: 40px;
+        color: black;
+    }
+
+    .achievements-left h1 span {
+        font-family: 'Dancing Script', cursive;
+        font-size: 55px;
+        font-weight: 700;
+        color: #ffb3b3;
+    }
+
+    .achievements-left h2 {
+        font-size: 26px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 15px;
+    }
+
+    /* Right Side pink tilted frame */
+    .achievements-right {
+        flex: 2;
+        background-color: #ffb3b3;
+        padding: 50px 30px;
+        border-radius: 40px;
+        transform: rotate(-2deg); 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* Certificate cards inside */
+    .certificate-card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        transform: rotate(2deg); 
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .certificate-card:hover {
+        transform: rotate(2deg) scale(1.05);
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .certificate-card img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .certificate-card a {
+        display: inline-block;
+        margin-top: 5px;
+        text-decoration: none;
+        color: #ff6666;
+        font-weight: 600;
+    }
+
+    .certificate-card a:hover {
+        text-decoration: underline;
+    }
+
+    @media(max-width: 900px) {
+        .achievements-section {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo (2).jpg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+        <!-- Left Side -->
+        <div class="achievements-left">
+            <h1><span>Certificates</span></h1>
+            <h2>and Achievements</h2>
+        </div>
+
+        <!-- Right Side -->
+        <div class="achievements-right">
+
+            <!-- Certificate 1 -->
+            <div class="certificate-card">
+                <img src="1Cousre.jpg" alt="Certificate 1">
+                <a href="https://coursera.org/verify/DBTYLIDO61UO " target="_blank">View Certificate</a>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="certificate-card">
+                <img src="2course.jpg" alt="Certificate 2">
+                <a href="https://coursera.org/verify/C2H9T9SO11HG" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="certificate-card">
+                <img src="3cousre.jpg" alt="Certificate 3">
+                <a href="https://coursera.org/verify/4X3KF0HEQMRZ" target="_blank">View Certificate</a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

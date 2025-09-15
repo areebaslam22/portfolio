@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Areeba Aslam</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #ffb3b3;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .logo img {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 2px solid white;
+        transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: transform 0.3s;
+    }
+
+    .nav-links a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 160px 50px 80px;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    /* Left Frame */
+    /* Left Frame */
+.contact-left {
+    flex: 1;
+    background-color: #ffb3b3;
+    padding: 40px;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-left:hover {
+    background-color: #ff9999; /* halka darker pink */
+    transform: rotate(-2deg) translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Right Frame */
+.contact-right {
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    transform: rotate(2deg);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-right:hover {
+    transform: rotate(2deg) translateY(-10px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+}
+
+
+    .contact-left h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .contact-left h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .contact-left p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    /* Right Frame */
+    /*.contact-right {
+        flex: 1;
+        background-color: white;
+        padding: 40px;
+        border-radius: 25px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        transform: rotate(2deg);
+        text-align: center;
+    }*/
+
+    .contact-right p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .contact-right a {
+        color: #ff6666;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .contact-right a:hover {
+        text-decoration: underline;
+    }
+
+    @media(max-width: 900px) {
+        .contact-section {
+            flex-direction: column;
+        }
+        .contact-left, .contact-right {
+            transform: none;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo (2).jpg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Left Frame -->
+        <div class="contact-left">
+            <h3>Call to Action</h3>
+            <h2>Let’s Work Together!</h2>
+            <p>Ready to bring your ideas to life with clean, responsive, and interactive web solutions?</p>
+            <p><strong>Delivering tested source code and responsive designs — let’s build something great!</strong></p>
+        </div>
+
+        <!-- Right Frame -->
+        <div class="contact-right">
+            <p><strong>Email:</strong> 
+                <a href="mailto:areebaaslam015@gmail.com">areebaaslam015@gmail.com</a>
+            </p>
+            <p><strong>Fiverr:</strong> 
+                <a href="https://fiverr.com/softdevareeba" target="_blank">fiverr.com/softdevareeba</a>
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>

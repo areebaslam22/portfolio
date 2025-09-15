@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Areeba Aslam Portfolio</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    /* Background Image with Overlay */
+    body {
+        position: relative;
+        background: url('download (1).jpeg') no-repeat center center/cover; /* Change later */
+        color: white;
+    }
+
+    body::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5); 
+        backdrop-filter: blur(3px);  
+        z-index: -1;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #ffb3b3;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .logo img {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s;
+        border-radius: 10px;
+         border: 2px solid white; 
+    }
+
+    .logo img:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: transform 0.3s;
+    }
+
+    .nav-links a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Home Section */
+    .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        padding: 0 50px;
+    }
+
+    /* Left Content */
+    .home-left {
+        max-width: 50%;
+    }
+
+    .home-left h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .home-left p {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    /* Hexagon Container */
+    .hexagon-container {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hexagon Border */
+    .hexagon-border {
+        width: 100%;
+        height: 100%;
+        background: #ffc0cb; /* Border color */
+        clip-path: polygon(
+            25% 6.7%, 75% 6.7%, 
+            100% 50%, 75% 93.3%, 
+            25% 93.3%, 0% 50%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px; /* Border thickness */
+        box-sizing: border-box;
+        transition: transform 0.3s;
+    }
+
+    .hexagon-border:hover {
+        transform: scale(1.05);
+    }
+
+    /* Hexagon Image */
+    /* Hexagon Image */
+.hexagon-image {
+    width: 100%;
+    height: 100%;
+    background: url('fiverr.jpg') no-repeat center top; /* image ko top se align kiya */
+    background-size: 120%; /* thoda zoom out jisse head crop na ho */
+    clip-path: inherit;
+}
+
+
+    @media(max-width: 900px){
+        .home {
+            flex-direction: column;
+            text-align: center;
+        }
+        .home-left {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+        .hexagon-container {
+            margin: 0 auto;
+        }
+        .navbar {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo (2).jpg" alt="Logo"> <!-- Replace with your logo -->
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="About.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <!-- Left Side -->
+        <div class="home-left">
+            <h1>Areeba Aslam</h1>
+            <p>Software Engineer <br>
+            Web & Software Developer — HTML | CSS | JavaScript | Java | Python | Documentation</p>
+        </div>
+
+        <!-- Right Hexagon Image -->
+        <div class="hexagon-container">
+            <div class="hexagon-border">
+                <div class="hexagon-image"></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

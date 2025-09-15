@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Areeba Aslam</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body, html {
+        height: 100%;
+        background-color: white; /* Full background white */
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #ffb3b3; /* Light baby pink */
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .logo img {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s;
+        border-radius: 10px;
+        border: 2px solid white;
+    }
+
+    .logo img:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: transform 0.3s;
+    }
+
+    .nav-links a:hover {
+        transform: scale(1.1);
+    }
+
+    /* About Section */
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px; /* Navbar ke neeche thoda space */
+        padding-bottom: 50px;
+    }
+
+   .about-frame {
+    display: flex;
+    gap: 40px; /* Frames ke beech gap zyada clear */
+    max-width: 1000px;
+    width: 90%;
+}
+
+    /* Left Content (Pink Frame with White Text) */
+    /* Left Frame Hover */
+.about-left {
+    flex: 2;
+    background-color: #ffb3b3; /* Pink frame */
+    padding: 25px;
+    border-radius: 10px;
+    color: white; /* White text */
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+}
+
+.about-left:hover {
+    transform: scale(1.03); /* halka zoom */
+    box-shadow: 0px 8px 20px rgba(255, 179, 179, 0.6); /* pink glow */
+}
+
+
+    .about-left h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        color: white; /* Heading bhi white */
+    }
+
+    .about-left p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Right Content (White Frame with Image) */
+    /* Right Content (White Frame with Image) */
+.about-right {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+}
+
+.about-right:hover {
+    transform: scale(1.05); /* thoda zoom */
+    box-shadow: 0px 8px 20px rgba(255, 179, 179, 0.6); /* pink glow */
+}
+
+    .about-right img {
+        width: 100%;
+         height: 350px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    .about-right h3 {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    @media(max-width: 900px){
+        .about-frame {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo (2).jpg" alt="Logo"> <!-- Replace with your logo -->
+        </div>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="#about">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-frame">
+            <!-- Left Side -->
+            <div class="about-left">
+                <h2>About Me</h2>
+                <p>
+                    I am a Software Engineering student with hands-on experience in building responsive websites using HTML, CSS, and JavaScript, as well as developing Java-based desktop applications with strong backend logic and database integration.
+
+
+                </p>
+                <br>
+                <p>
+                   My focus is on creating fast, mobile-friendly, and user-friendly solutions that help businesses and individuals establish a professional online presence. Along with coding, I have a strong foundation in software documentation and system design, including UML diagrams, ER diagrams, flowcharts, and class diagrams and many other diagrams,ensuring well-structured and scalable projects.
+<br>
+Currently, I am seeking remote internship opportunities to apply my technical skills, enhance my professional expertise, and contribute to impactful real-world projects.
+                </p>
+            </div>
+
+            <!-- Right Side -->
+            <div class="about-right">
+                <img src="images (2).jpeg" alt="Areeba"> <!-- Replace with your image -->
+                <h3 style="color: #ffb3b3;">Areeba - Web & Software Developer</h3>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
