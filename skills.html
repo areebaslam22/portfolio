@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills & Services - Areeba Aslam</title>
+<!-- Google Fonts for cursive -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body, html {
+        height: 100%;
+        background-color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #ffb3b3;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .logo img {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s;
+        border-radius: 10px;
+        border: 2px solid white;
+    }
+
+    .logo img:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: transform 0.3s;
+    }
+
+    .nav-links a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Main Section */
+    .skills-section {
+        padding-top: 140px;
+        text-align: center;
+    }
+
+    .skills-section h1 {
+        font-size: 40px;
+        color: #ffb3b3;
+        margin-bottom: 50px;
+    }
+
+    /* Only Services word in cursive */
+    .skills-section h1 span {
+        font-family: 'Dancing Script', cursive;
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+    .skills-frame {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    /* Left Frame (Skills) */
+    .skills-left {
+        flex: 1;
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        min-width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+    }
+
+    .skills-left:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 8px 20px rgba(255, 179, 179, 0.6);
+    }
+
+    .skills-left ul {
+        list-style: disc; /* bullets */
+        padding-left: 20px; /* spacing for bullets */
+        margin-bottom: 15px;
+    }
+
+    .skills-left ul li {
+        margin-bottom: 12px;
+        font-size: 18px;
+        color: #444; /* dark text for readability */
+        line-height: 1.6;
+    }
+
+    .skills-left ul li strong {
+        color: #ffb3b3; /* highlight keywords in pink */
+    }
+
+    /* Right Frame (Services) */
+    .skills-right {
+        flex: 1;
+        background-color: #ffb3b3;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        min-width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+    }
+
+    .skills-right:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 8px 20px rgba(255, 179, 179, 0.6);
+    }
+
+    .skills-right h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        color: white;
+    }
+
+    .skills-right ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .skills-right ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: white;
+    }
+
+    @media(max-width: 900px) {
+        .skills-frame {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo (2).jpg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Skills & Services Section -->
+    <section class="skills-section">
+        <h1>Skills & <span>Services</span></h1>
+        <div class="skills-frame">
+            <!-- Left Frame (Skills) -->
+            <div class="skills-left">
+                <ul>
+                    <li><strong>Responsive Web Development</strong> using HTML, CSS, and JavaScript</li>
+                    <li><strong>Interactive UI Features</strong> (forms, image galleries, FAQs, sliders)</li>
+                    <li><strong>Java Desktop Applications</strong> with CRUD operations & database integration</li>
+                    <li><strong>Software Documentation & Design</strong> (UML, Use Case, Class, ER diagrams, Flowcharts)</li>
+                    <li><strong>Bug Fixing & Debugging</strong> for both frontend and backend issues</li>
+                    <li><strong>Performance Optimization</strong> ensuring fast loading and clean responsive design</li>
+                </ul>
+            </div>
+
+            <!-- Right Frame (Services) -->
+            <div class="skills-right">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>Landing pages & personal portfolios</li>
+                    <li>Multi-page responsive websites</li>
+                    <li>Interactive UI with JavaScript (sliders, forms, FAQs, galleries)</li>
+                    <li>Contact forms with validation</li>
+                </ul>
+
+                <h3>Java Development</h3>
+                <ul>
+                    <li>Desktop applications with CRUD & DB integration</li>
+                    <li>Inventory / hospital / management systems</li>
+                    <li>Backend logic & database connectivity</li>
+                </ul>
+
+                <h3>Bug Fixing & Improvements</h3>
+                <ul>
+                    <li>Fix HTML/CSS/JS issues</li>
+                    <li>Debug Java applications</li>
+                    <li>Optimize website speed & performance</li>
+                </ul>
+
+                <h3>Documentation & Design</h3>
+                <ul>
+                    <li>UML diagrams (Use Case, Class, Activity)</li>
+                    <li>ER diagrams & Flowcharts</li>
+                    <li>Software construction reports</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
